@@ -1,0 +1,85 @@
+2017-04-05 09:52:34,573 [Dummy-1:140236956849920] [django.db.backends:89] [DEBUG]- (0.004) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-04-05 09:52:34,576 [Dummy-1:140236956849920] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[05/Apr/2017 09:55:02] "GET /wechat HTTP/1.0" 500 94655
+[05/Apr/2017 09:55:24] "GET /wechat HTTP/1.0" 500 94414
+[05/Apr/2017 09:57:28] "GET /wechat HTTP/1.0" 500 94640
+[05/Apr/2017 09:57:57] "GET /wechat HTTP/1.0" 404 2028
+[05/Apr/2017 09:58:04] "GET /wechat/send HTTP/1.0" 200 8
+[05/Apr/2017 09:58:46] "GET /wechat HTTP/1.0" 404 2028
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have unapplied migrations; your app may not work properly until they are applied.
+Run 'python manage.py migrate' to apply them.
+April 05, 2017 - 09:52:34
+Django version 1.8.5, using settings 'wechat.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+CommandError: You must set settings.ALLOWED_HOSTS if DEBUG is False.
+CommandError: You must set settings.ALLOWED_HOSTS if DEBUG is False.
+[05/Apr/2017 10:03:02] "GET /wechat/send HTTP/1.0" 200 8
+[05/Apr/2017 10:03:04] "GET /wechat HTTP/1.0" 404 80
+[05/Apr/2017 10:15:22] "GET /wechat HTTP/1.0" 404 80
+[05/Apr/2017 10:15:46] "GET /wechat/send HTTP/1.0" 200 8
+[05/Apr/2017 10:31:52] "GET /wechat/send HTTP/1.0" 200 8
+[05/Apr/2017 10:32:09] "GET /wechat/ HTTP/1.0" 404 81
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have unapplied migrations; your app may not work properly until they are applied.
+Run 'python manage.py migrate' to apply them.
+April 05, 2017 - 10:02:14
+Django version 1.8.5, using settings 'wechat.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+2017-04-05 10:40:35,939 [Thread-1:140646052255488] [django:17] [INFO]- None
+2017-04-05 10:40:35,940 [Thread-1:140646052255488] [django:22] [INFO]- Encrypt:c981b7def6ee4f907c39f9bad2684a383ab2c9a2
+[05/Apr/2017 10:40:35] "GET /wechat/test HTTP/1.0" 200 5
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.5-py2.7.egg/django/core/servers/basehttp.py", line 102, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/lib64/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/site-packages/Django-1.8.5-py2.7.egg/django/core/servers/basehttp.py", line 167, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python2.7/socket.py", line 476, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[05/Apr/2017 11:14:14] "GET http://106.2.112.147/proxyip/check HTTP/1.1" 404 107
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have unapplied migrations; your app may not work properly until they are applied.
+Run 'python manage.py migrate' to apply them.
+April 05, 2017 - 10:40:18
+Django version 1.8.5, using settings 'wechat.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('106.38.230.190', 61759)
+----------------------------------------
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.5-py2.7.egg/django/core/management/__init__.py", line 351, in execute_from_command_line
+    utility.execute()
+  File "/usr/lib/python2.7/site-packages/Django-1.8.5-py2.7.egg/django/core/management/__init__.py", line 343, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.5-py2.7.egg/django/core/management/__init__.py", line 177, in fetch_command
+    commands = get_commands()
+  File "/usr/lib/python2.7/site-packages/Django-1.8.5-py2.7.egg/django/utils/lru_cache.py", line 101, in wrapper
+    result = user_function(*args, **kwds)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.5-py2.7.egg/django/core/management/__init__.py", line 72, in get_commands
+    for app_config in reversed(list(apps.get_app_configs())):
+  File "/usr/lib/python2.7/site-packages/Django-1.8.5-py2.7.egg/django/apps/registry.py", line 137, in get_app_configs
+    self.check_apps_ready()
+  File "/usr/lib/python2.7/site-packages/Django-1.8.5-py2.7.egg/django/apps/registry.py", line 124, in check_apps_ready
+    raise AppRegistryNotReady("Apps aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Apps aren't loaded yet.
